@@ -4,7 +4,6 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("---------------------");
         System.out.println("Task 1");
-        System.out.println("Task 9");
         int totalMoney = 0;
         int oneMonthMoney = 15000;
         int scoreMoney = 2459000;
