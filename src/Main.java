@@ -4,14 +4,14 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("---------------------");
         System.out.println("Task 1");
-        int totalMoney = 0;
-        int oneMonthMoney = 15000;
-        int scoreMoney = 2459000;
+        float totalMoney = 0;
+        float oneMonthMoney = 15000;
+        float percent = 0.12f;
+        float scoreMoney = 2_459_000;
         int month = 0;
         while (totalMoney <= scoreMoney) {
-            month++;
-            totalMoney += oneMonthMoney;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalMoney + " рублей");
+            totalMoney = totalMoney + (totalMoney * percent) + oneMonthMoney;
+            System.out.println("Месяц " + month++ + ", сумма накоплений равна " + (int)totalMoney + " рублей");
         }
         System.out.println("---------------------");
 
@@ -28,11 +28,13 @@ public class Main {
 
         System.out.println("Task 3");
         int peopleCountyY = 12_000_000;
-        int birthRate = peopleCountyY / 1000 * 17;
-        int deathRate = peopleCountyY / 1000 * 8;
         int year = 1;
+        int birthRate;
+        int deathRate;
         while (year <= 10){
-            peopleCountyY += birthRate - deathRate;
+            birthRate = peopleCountyY / 1000 * 17;
+            deathRate = peopleCountyY / 1000 * 8;
+            peopleCountyY = peopleCountyY + birthRate - deathRate;
             System.out.println("Год " + year++ + ", численность населения состовляет " + peopleCountyY + " человек");
         }
         System.out.println("---------------------");
